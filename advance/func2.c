@@ -31,6 +31,7 @@ void exeCommand(char *command)
 			if (execve(parsing[0], parsing, NULL) == -1)
 			{
 				perror("execve");
+				exit(EXIT_FAILURE);
 			}
 		}
 		else

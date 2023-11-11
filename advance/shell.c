@@ -12,7 +12,10 @@ int main(int argc, char *argv[])
     while (1)
     {
 	    print(prompt);
-	    fgets(command, sizeof(command), stdin);
+	    if (fgets(command, sizeof(command), stdin) == NULL)
+	    {
+		    perror("fgets");
+	    }
 	    exeCommand(command);
     }
         return 0;

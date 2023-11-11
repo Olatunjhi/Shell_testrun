@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 void exeCommand(char *command);
 void printUserMessage(char *shellProgram);
